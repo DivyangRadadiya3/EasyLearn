@@ -8,9 +8,9 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
+  { name: "Tutorials", href: "#", current: false },
   { name: "About Us", href: "#", current: false },
   { name: "Contact Us", href: "#", current: false },
-  { name: "Tutorials", href: "#", current: false },
   { name: "Dashboard", href: "#", current: false },
 ];
 
@@ -53,29 +53,29 @@ export default function Navbar() {
             </span>
           </div>
           <div className="absolute inset-y-0 right-0 flex pr-2 sm:justify-end sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" >
               <div className="hidden sm:hidden md:hidden lg:block xl:block 2xl:block">
                 <div className="flex space-x-4">
                   {navigation.map((item) => (
-                    <button
-                      key={item.name}
-                      // href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-700 text-white"
-                          : "text-black hover:bg-gray-700 hover:text-white",
-                        "rounded-full px-3 py-2 text-xl font-normal"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </button>
+                    <NavLink to={item.name}>
+                      <button
+                        key={item.name}
+                        // href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-700 text-white"
+                            : "text-black hover:bg-gray-700 hover:text-white",
+                          "rounded-full px-5 py-2 text-xl  font-normal"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.name}
+                      </button>
+                    </NavLink>
                   ))}
                 </div>
               </div>
             </div>
-
-           
 
             {/* Profile dropdown */}
             {/* <Menu as="div" className="relative ml-3">
@@ -146,24 +146,26 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={toggle ? "block" : "hidden"}>
+      <div className={toggle ? "block shadow-lg" : "hidden"}>
         <div className="space-y-1 px-2 pb-3 pt-2 ">
           {navigation.map((item) => (
-            <button
-              key={item.name}
-              // onClick={() => setToggle(!toggle)}
-              // as="a"
-              // href={item.href}
-              className={classNames(
-                item.current
-                  ? "bg-gray-700 text-white"
-                  : "text-black hover:bg-gray-800 hover:text-white",
-                "block rounded-md px-3 py-2 text-base font-normal w-full"
-              )}
-              aria-current={item.current ? "page" : undefined}
-            >
-              {item.name}
-            </button>
+            <NavLink to={item.name}>
+              <button
+                key={item.name}
+                // onClick={() => setToggle(!toggle)}
+                // as="a"
+                // href={item.href}
+                className={classNames(
+                  item.current
+                    ? "bg-gray-700 text-white"
+                    : "text-black hover:bg-gray-800 hover:text-white",
+                  "block rounded-md px-3 py-2 text-xl font-normal w-full"
+                )}
+                aria-current={item.current ? "page" : undefined}
+              >
+                {item.name}
+              </button>
+            </NavLink>
           ))}
         </div>
       </div>
