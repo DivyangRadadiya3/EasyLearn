@@ -6,7 +6,7 @@ import Router from './Componentes/Router';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-sans">
       <Navbar/>
       <Router/>
       {/* <header className="App-header">

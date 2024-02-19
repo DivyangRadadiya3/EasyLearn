@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import React,{ useState } from "react";
+// import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { NavLink } from "react-router-dom";
 // import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { VscAccount } from "react-icons/vsc";
@@ -7,11 +7,11 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 // import { BsPersonCircle } from "react-icons/bs";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Tutorials", href: "#", current: false },
-  { name: "About Us", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
-  { name: "Dashboard", href: "#", current: false },
+  { name: "Home", current: true },
+  { name: "Tutorials", current: false },
+  { name: "AboutUs", current: false },
+  { name: "ContactUs", current: false },
+  { name: "Dashboard", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,6 +20,11 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const [activeButton, setActiveButton] = useState();
+
+  function pgActive(pageName) {
+    setActiveButton(pageName);
+  }
 
   return (
     // <Disclosure
@@ -28,7 +33,7 @@ export default function Navbar() {
     // >
     //   {({ open }) => (
     <>
-      <div className=" w-auto px-2 sm:px-6 lg:px-8 bg-white shadow-md  py-2  border-b-2">
+      <div className="top-0 sticky z-20 w-auto px-2 sm:px-6 lg:px-8 bg-white shadow-md py-2 border-b-2">
         <div className="relative flex p-2 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center sm:block md:block lg:hidden xl:hidden 2xl:hidden">
             {/* Mobile menu button*/}
@@ -53,23 +58,23 @@ export default function Navbar() {
             </span>
           </div>
           <div className="absolute inset-y-0 right-0 flex pr-2 sm:justify-end sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" >
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="hidden sm:hidden md:hidden lg:block xl:block 2xl:block">
                 <div className="flex space-x-4">
-                  {navigation.map((item) => (
-                    <NavLink to={item.name}>
+                  {navigation.map((value, index) => (
+                    <NavLink to={value.name} key={index}>
                       <button
-                        key={item.name}
-                        // href={item.href}
+                        key={index}
+                        // href={value.href}
                         className={classNames(
-                          item.current
+                          value.current
                             ? "bg-gray-700 text-white"
                             : "text-black hover:bg-gray-700 hover:text-white",
                           "rounded-full px-5 py-2 text-xl  font-normal"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        // aria-current={value.current ? "page" : undefined}
                       >
-                        {item.name}
+                        {value.name}
                       </button>
                     </NavLink>
                   ))}
@@ -144,14 +149,43 @@ export default function Navbar() {
                 </Menu> */}
           </div>
         </div>
+        <div
+          className={
+            toggle
+              ? "block my-3 bg-gray-200 dark:bg-gray-200 rounded-md shadow-md  w-full lg:hidden"
+              : "hidden"
+          }
+        >
+          <div className="space-y-1 px-2 py-3">
+            {navigation.map((item, index) => (
+              <NavLink to={item.name} key={index}>
+                <button
+                  key={index}
+                  // onClick={() => setToggle(!toggle)}
+                  // as="a"
+                  // href={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-700 text-white"
+                      : "text-black hover:bg-gray-800 hover:text-white",
+                    "block rounded-md px-3 py-2 text-xl font-normal w-full"
+                  )}
+                  // aria-current={item.current ? "page" : undefined}
+                >
+                  {item.name}
+                </button>
+              </NavLink>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className={toggle ? "block shadow-lg" : "hidden"}>
+      {/* <div className={toggle ? "block shadow-lg  w-full lg:hidden" : "hidden"}>
         <div className="space-y-1 px-2 pb-3 pt-2 ">
-          {navigation.map((item) => (
-            <NavLink to={item.name}>
+          {navigation.map((item, index) => (
+            <NavLink to={item.name} key={index}>
               <button
-                key={item.name}
+                key={index}
                 // onClick={() => setToggle(!toggle)}
                 // as="a"
                 // href={item.href}
@@ -168,9 +202,7 @@ export default function Navbar() {
             </NavLink>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
-    // )}
-    // </Disclosure>
   );
 }

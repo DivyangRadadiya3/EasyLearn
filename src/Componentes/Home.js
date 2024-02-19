@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <>
-      <div className="w-auto mx-auto my-20 rounded-xl  overflow-hidden ">
+      <div className="w-auto mx-auto my-20 rounded-xl overflow-hidden ">
         <div className="md:flex">
           <div className="mx-auto p-8">
             <p className="uppercase tracking-wide text-5xl text-center  text-indigo-500 font-normal">
@@ -20,7 +20,7 @@ function Home() {
         </div>
       </div>
       <div className="w-auto mx-auto my-20 rounded-xl  overflow-hidden ">
-        <NavLink to="/">
+        <NavLink to="/Login">
           <button
             type="button"
             className="px-14 py-3.5 text-2xl font-normal text-white bg-slate-700 hover:bg-slate-800 rounded-full text-center dark:bg-slate-600 dark:hover:bg-slate-700"
