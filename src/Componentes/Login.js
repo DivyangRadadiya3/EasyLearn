@@ -105,7 +105,7 @@ function Login() {
               Log In
             </div>
             <div className="p-2 py-2">
-              <div className="">
+              <div>
                 <label className="text-lg text-black" htmlFor="form1Example13">
                   Email address
                 </label>
@@ -164,7 +164,7 @@ function Login() {
                 </span>
               </button>
 
-              <p class="mt-6 text-center">
+              <p className="mt-6 text-center">
                 Don't have an account?{" "}
                 <NavLink to="/Register">
                   <u className="text-blue-500 hover:text-blue-700 font-semibold">

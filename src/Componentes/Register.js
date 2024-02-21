@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
+import Axios from "axios";
 import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -36,51 +37,65 @@ function Register() {
   //   }
   // }, [user.uid, data]);
 
-  // const submit = async () => {
-  //   if (!username || !contact || !email || !password) {
-  //     toast.warn("Fill up empty field!");
-  //   } else {
-  //     if (!email.match(emailpatton)) {
-  //       toast.warn("Invalid email address!");
-  //     } else {
-  //       if (!password.match(spcl)) {
-  //         toast.warn("Must Include Symbol in Password!");
-  //       } else {
-  //         if (!password.match(numbers)) {
-  //           toast.warn("Must Include digit in Password!");
-  //         } else {
-  //           if (!password.match(upperCaseLetters)) {
-  //             toast.warn("Must Include upperCase Letters in Password!");
-  //           } else {
-  //             if (!password.match(lowerCaseLetters)) {
-  //               toast.warn("Must Include lowerCase Letters in Password!");
-  //             } else {
-  //               createUserWithEmailAndPassword(auth, email, password)
-  //                 .then((userData) => {
-  //                   fireDb
-  //                     .child("users/" + userData.user.uid)
-  //                     .set(state, (err) => {
-  //                       if (err) {
-  //                         toast.error(err.message);
-  //                       } else {
-  //                         toast.success("Registration Successfully...");
-  //                         setTimeout(() => {
-  //                           navigate("/Home");
-  //                         }, [3000]);
-  //                       }
-  //                     });
-  //                   console.log(userData);
-  //                 })
-  //                 .catch((error) => {
-  //                   console.log(error);
-  //                 });
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // };
+  const submit = async () => {
+    if (!username || !contact || !email || !password) {
+      toast.warn("Fill up empty field!");
+    } else {
+      if (!email.match(emailpatton)) {
+        toast.warn("Invalid email address!");
+      } else {
+        if (!password.match(spcl)) {
+          toast.warn("Must Include Symbol in Password!");
+        } else {
+          if (!password.match(numbers)) {
+            toast.warn("Must Include digit in Password!");
+          } else {
+            if (!password.match(upperCaseLetters)) {
+              toast.warn("Must Include upperCase Letters in Password!");
+            } else {
+              if (!password.match(lowerCaseLetters)) {
+                toast.warn("Must Include lowerCase Letters in Password!");
+              } else {
+                // createUserWithEmailAndPassword(auth, email, password)
+                //   .then((userData) => {
+                // fireDb
+                //   .child("users/" + userData.user.uid)
+                //   .set(state, (err) => {
+                //     if (err) {
+                //       toast.error(err.message);
+                //     } else {
+                //       toast.success("Registration Successfully...");
+                //       setTimeout(() => {
+                //         navigate("/Home");
+                //       }, [3000]);
+                //     }
+                //   });
+                // })
+                try {
+                  const request = Axios.post(
+                    "mongodb://localhost:27017/User",state
+                  );
+                  fetch('mongodb://localhost:27017/User').then((res) => {
+                    if (res.status === 200) {
+                      return res.json();
+                    } else {
+                      console.log("not work");
+                    }
+                  });
+                } catch {
+                  console.log("not work");
+                }
+
+                // .catch((error) => {
+                //   console.log(error);
+                // });
+              }
+            }
+          }
+        }
+      }
+    }
+  };
 
   return (
     <>
@@ -166,14 +181,14 @@ function Register() {
                 className="flex items-center justify-center h-11 bg-yellow-400 hover:bg-yellow-600 font-bold py-2 px-4 rounded-full
                 w-full shadow-2xl cursor-pointer 
                 overflow-hidden"
-                // onClick={() => submit()}
+                onClick={() => submit()}
               >
                 <span className="block w-max text-white font-normal tracking-wide text-sm md:text-xl sm:text-base ">
                   Register
                 </span>
               </button>
 
-              <p class="mt-6 text-center">
+              <p className="mt-6 text-center">
                 Already have an account?{" "}
                 <NavLink to="/Login">
                   <u className="text-blue-500 hover:text-blue-700 font-semibold">
