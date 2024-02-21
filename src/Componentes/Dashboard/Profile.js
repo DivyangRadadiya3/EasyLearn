@@ -7,7 +7,11 @@ const Profile = () => {
   // const { user } = UserAuth();
 
   // return <>{user ? <Profilecard /> : <Login />}</>;
-  <Profilecard />
+  return (
+    <>
+      <Profilecard />
+    </>
+  );
 };
 
 export default Profile;
