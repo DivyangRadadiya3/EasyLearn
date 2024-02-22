@@ -10,7 +10,7 @@ import {
 } from "react-icons/hi";
 import { CiFacebook, CiLinkedin, CiInstagram, CiYoutube } from "react-icons/ci";
 import { FiEdit3, FiSettings, FiX } from "react-icons/fi";
-import { AiOutlineLogout, AiOutlineQuestionCircle } from "react-icons/ai";
+// import { AiOutlineLogout, AiOutlineQuestionCircle } from "react-icons/ai";
 import { BsPersonCircle, BsPen, BsList } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 import { toast } from "react-toastify";
@@ -147,7 +147,7 @@ const Profilecard = () => {
   return (
     <>
         <div className="flex">
-          <div className="relative bg-white shadow rounded-3xl mx-3 p-3 px-6">
+          <div className="relative bg-white shadow rounded-3xl w-4/12 mx-3 p-3 px-6">
             <div className="relative">
               <img
                 className="h-40 w-40 rounded-full border mx-auto"
@@ -297,7 +297,7 @@ const Profilecard = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-9/12 sm:9/12 p-2  mr-3 pl-5 h-fit bg-white rounded-3xl">
+          <div className="md:w-9/12 sm:9/12 p-2 w-8/12 mr-3 pl-5 h-fit bg-white rounded-3xl">
             <div className="p-3">
               <div className="text-gray-700">
                 <div className="grid md:grid-cols-2 gap-3 text-sm">
