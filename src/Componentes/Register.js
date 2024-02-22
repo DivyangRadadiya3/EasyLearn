@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-import Axios from "axios";
+// import Axios from "axios";
 import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -70,24 +70,81 @@ function Register() {
                 //       }, [3000]);
                 //     }
                 //   });
+
                 // })
-                try {
-                  const request = Axios.post(
-                    "mongodb://localhost:27017/User",state
-                  );
-                  fetch('mongodb://localhost:27017/User').then((res) => {
-                    if (res.status === 200) {
-                      return res.json();
-                    } else {
-                      console.log("not work");
-                    }
-                  });
-                } catch {
-                  console.log("not work");
-                }
+                // try {
+                //   const request = Axios.post(
+                //     "mongodb://localhost:27017/User",state
+                //   );
+                //   fetch('mongodb://localhost:27017/User').then((res) => {
+                //     if (res.status === 200) {
+                //       return res.json();
+                //     } else {
+                //       console.log("not work");
+                //     }
+                //   });
+                // } catch {
+                //   console.log("not work");
+                // }
 
                 // .catch((error) => {
                 //   console.log(error);
+                // });
+
+                // const postURL = "mongodb://localhost:27017/";
+                const postURL = "http://localhost:3000/Register";
+                console.log("start call api");
+                const res = await fetch(postURL, {
+                  method: "POST",
+                  body: state,
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  }
+                });
+                // .then((response) => {
+                //   response.text()
+                //   console.log(response);
+                // })
+                // .then((data) => {
+                //   console.log(data);
+                // });
+                console.log(state);
+                // const data = await res.text();
+                // console.log(data);
+
+                // fetch(postURL)
+                //   .then((response) => {
+                //     if (response.status === 200) {
+                //       console.log("SUCCESSS");
+                //       return response.json();
+                //     } else if (response.status === 408) {
+                //       console.log("SOMETHING WENT WRONG");
+                //     }
+                //   })
+                //   .then((data) => {
+                //     this.setState({
+                //       isLoading: false,
+                //       downlines: data.response,
+                //     });
+                //     console.log("DATA STORED");
+                //   })
+                //   .catch((error) => {
+                //     console.log({ error }); //Our previously set up route in the backend
+                //   });
+                console.log("end call api"); //Our previously set up route in the backend
+                // fetch(postURL, {
+                //   method: "POST",
+                //   headers: {
+                //     Accept: "application/json",
+                //     "Content-Type": "application/json",
+                //   },
+                //   body:
+                //     // We should keep the fields consistent for managing this data later
+                //     state,
+                // }).then(() => {
+                //   // Once posted, the user will be notified
+                //   alert("You have been added to the system!");
                 // });
               }
             }

@@ -14,9 +14,9 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
     { name: "Dashboard", id: 5 },
   ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
