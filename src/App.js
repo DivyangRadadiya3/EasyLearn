@@ -3,12 +3,16 @@ import './App.css';
 import Navbar from './Componentes/Navbar';
 // import Home from './Componentes/Home';
 import Router from './Componentes/Router';
+import { AuthContextProvider } from './Context/AuthContext';
+
 
 function App() {
   return (
     <div className="App font-sans">
+    <AuthContextProvider>
       <Navbar/>
       <Router/>
+    </AuthContextProvider>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
