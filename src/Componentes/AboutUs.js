@@ -139,7 +139,7 @@ function AboutUs() {
               <p className="mb-4 text-4xl font-normal text-slate-800 dark:text-slate-300">
                 We are providing a better facility
               </p>
-              <p className="px-4 p-4 text-3xl text-justify font-light leading-10 mb-4 text-gray-500 dark:text-slate-500">
+              <p className="px-4 p-4 text-3xl text-justify font-light leading-10 mb-4 text-gray-800 dark:text-slate-300">
                 The EasyLearn website comes in a number of editions, designed to
                 assist with the creation of learning communities by offering
                 various opportunities for collaboration and interaction through
@@ -148,8 +148,8 @@ function AboutUs() {
                 reporting, internal messaging, forum, chat, surveys, calendar
                 and others.
               </p>
-              <ul className="mb-10">
-                <li className="flex items-center mb-4 text-lg text-gray-600 dark:text-gray-300">
+              <ul className="mb-10 text-gray-800 dark:text-slate-300">
+                <li className="flex items-center mb-4 text-lg">
                   <span className="mr-3 text-blue-500 dark:text-blue-400">
                     <div className="bg-gray-400 rounded-full h-5 w-5 text-black text-xs text-center">
                       <i className="fa-solid fa-arrow-right mt-1"></i>
@@ -158,7 +158,7 @@ function AboutUs() {
                   Increase access to learning opportunities/increase
                   flexibility.
                 </li>
-                <li className="flex items-center mb-4 text-lg text-slate-600 dark:text-slate-300">
+                <li className="flex items-center mb-4 text-lg ">
                   <span className="mr-3 text-blue-500 dark:text-blue-400">
                     <div className="bg-gray-400  rounded-full h-5 w-5 text-black  text-xs text-center">
                       <i className="fa-solid fa-arrow-right mt-1"></i>
@@ -166,7 +166,7 @@ function AboutUs() {
                   </span>
                   Enhance the general quality of teaching/learning.
                 </li>
-                <li className="flex items-center mb-4 text-lg text-slate-600 dark:text-slate-300">
+                <li className="flex items-center mb-4 text-lg ">
                   <span className="mr-3 text-blue-500 dark:text-blue-400">
                     <div className="bg-gray-400  rounded-full h-5 w-5 text-black  text-xs text-center">
                       <i className="fa-solid fa-arrow-right mt-1"></i>
@@ -174,7 +174,7 @@ function AboutUs() {
                   </span>
                   Support Team
                 </li>
-                <li className="flex items-center mb-4 text-lg text-slate-600 dark:text-slate-300">
+                <li className="flex items-center mb-4 text-lg ">
                   <span className="mr-3 text-blue-500 dark:text-blue-400 ">
                     <div className="bg-gray-400  rounded-full h-5 w-5 text-black  text-xs text-center">
                       <i className="fa-solid fa-arrow-right mt-1"></i>
@@ -214,11 +214,11 @@ function AboutUs() {
             </h2>
           </div>
           {/* <div className="flex flex-wrap items-center"> */}
-          <div className="px-4 mb-10 md:text-center md:mb-20">
-            <p className="mb-4 text-4xl font-normal text-slate-800 dark:text-slate-300">
+          <div className="px-4 mb-10 md:text-center text-gray-800 dark:text-slate-300 md:mb-20">
+            <p className="mb-4 text-4xl font-normal">
               We are providing a better facility
             </p>
-            <p className="px-4 p-4 text-3xl text-justify font-light leading-10 mb-4 text-gray-500 dark:text-slate-500">
+            <p className="px-4 p-4 text-3xl text-justify font-light leading-10 mb-4">
               Develop the skills and competencies needed, and also ensure that
               learners have the digital literacy skills required in their
               discipline, profession or career – or, put simply, to get work in
@@ -284,7 +284,7 @@ function AboutUs() {
               <button
                 type="button"
                 onClick={() => setToggle(!toggle)}
-                className="relative inline-flex items-center justify-center rounded-md p-2 text-[#56574e] dark:text-[#56574e]  hover:cursor-pointer"
+                className="relative inline-flex items-center justify-center rounded-md p-2 text-[#56574e] dark:text-white hover:cursor-pointer"
               >
                 <svg className="w-6 h-6" viewBox="0 0 16 16">
                   {toggle ? (
@@ -298,7 +298,7 @@ function AboutUs() {
             <div
               className={
                 toggle
-                  ? "block border-t border-black mt-3 pt-3 text-xl text-justify font-normal leading-7 mb-4  text-gray-900 dark:text-slate-500"
+                  ? "block border-t border-black mt-3 pt-3 text-xl text-justify font-normal leading-7 mb-4 text-gray-800 dark:text-slate-300"
                   : "hidden"
               }
             >
@@ -316,8 +316,8 @@ function AboutUs() {
             </h2>
           </div>
           <div className="justify-center px-4 py-4 mx-auto lg:py-0">
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 md:grid-cols-2">
-              <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 ">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 md:grid-cols-2 dark:bg-gray-800">
+              <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-white dark:border-white">
                 <a href="#" className="">
                   <img
                     src="i2.png"
@@ -360,7 +360,7 @@ function AboutUs() {
                   </div>
                 </div>
               </div>
-              <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 ">
+              <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800  border border-black dark:border-white">
                 <a href="#" className="">
                   <img
                     src="i2.png"

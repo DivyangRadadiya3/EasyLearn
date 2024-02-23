@@ -98,15 +98,15 @@ function Login() {
 
   return (
     <>
-      <section className="h-full relative pt-10 ">
-        <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40 ">
-          <div className="shadow-xl bg-indigo-50 rounded-2xl p-4 m-auto md:w-8/12 lg:w-6/12 xl:w-6/12 ">
-            <div className="font-normal text-center text-3xl text-black my-3 ">
-              Log In
+      <div className="h-screen relative pt-16">
+        <div className="relative mx-auto shadow-xl bg-indigo-50 rounded-2xl px-4 sm:px-6 py-8 max-w-md text-gray-500 ">
+          <div className=" ">
+            <div className="font-normal self-center text-3xl uppercas text-black my-3">
+              LogIn Your Account
             </div>
-            <div className="p-2 py-2">
-              <div>
-                <label className="text-lg text-black" htmlFor="form1Example13">
+            <div className="p-2 mt-10">
+              <div className="mb-2 md:mb-4">
+                <label className="text-gray-700 text-lg" >
                   Email address
                 </label>
                 <input
@@ -115,7 +115,7 @@ function Login() {
                   name="email"
                   value={email || ""}
                   onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-2 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                  className="mt-1 block w-full h-full text-sm sm:text-base px-4 py-3 rounded-lg border shadow-sm placeholder-slate-400
                   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                   disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                   invalid:border-pink-500 invalid:text-pink-600 peer
@@ -127,8 +127,8 @@ function Login() {
                 </p>
               </div>
 
-              <div className="">
-                <label className="text-lg text-black" htmlFor="form1Example13">
+              <div className="mb-2 md:mb-4">
+                <label className="text-gray-700 text-lg">
                   Password
                 </label>
                 <input
@@ -137,7 +137,7 @@ function Login() {
                   name="password"
                   value={password || ""}
                   onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-2 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                  className="mt-1 block w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400
                   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                   disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                   invalid:border-pink-500 invalid:text-pink-600 peer
@@ -151,17 +151,14 @@ function Login() {
 
               <button
                 type="submit"
-                className="flex items-center justify-center h-11  
-                w-full bg-gradient-to-br from-yellow-400 to-yellow-600  rounded-full shadow-2xl cursor-pointer 
-                overflow-hidden"
+                // className="flex items-center justify-center h-11  
+                // w-full bg-gradient-to-br from-yellow-400 to-yellow-600  rounded-xl shadow-2xl cursor-pointer 
+                // overflow-hidden"
                 // onClick={() => submit()}
+                className="w-full flex items-center justify-center px-4 py-2 text-sm md:text-xl sm:text-base font-medium leading-6 text-gray-600 
+                whitespace-no-wrap bg-yellow-300 border border-black rounded-xl shadow-sm hover:bg-green-300 hover:text-black"
               >
-                <span
-                  className="block w-max text-white hover: font-normal z-10 pointer-events-none 
-                hover:z-20 tracking-wide text-sm md:text-xl sm:text-base "
-                >
-                  Sign In
-                </span>
+                  Log In
               </button>
 
               <p className="mt-6 text-center">
@@ -173,17 +170,12 @@ function Login() {
                 </NavLink>
               </p>
 
-              {/* <p class="mb-0 mt-2 pt-2 text-base font-medium text-center">
-                Don't have an account?{" "}
-                <NavLink to="/Register">
-                  <u className="text-blue-500 hover:text-blue-700 font-semibold">
-                    Register here
-                  </u>
-                </NavLink>
-              </p> */}
-
-              <div className="divider d-flex align-items-center my-4">
-                <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+              <div class="relative my-10 h-px bg-gray-500">
+                <div class="absolute left-0 top-0 flex justify-center w-full -mt-3">
+                  <p class="bg-indigo-50 px-4 text-md text-black ">
+                    Or Login With
+                  </p>
+                </div>
               </div>
 
               <button
@@ -214,7 +206,7 @@ function Login() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

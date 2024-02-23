@@ -100,7 +100,7 @@ function Register() {
                   headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json",
-                  }
+                  },
                 });
                 // .then((response) => {
                 //   response.text()
@@ -109,9 +109,9 @@ function Register() {
                 // .then((data) => {
                 //   console.log(data);
                 // });
-                console.log(state);
-                // const data = await res.text();
-                // console.log(data);
+                // console.log(state);
+                const data = await res.text();
+                console.log(data);
 
                 // fetch(postURL)
                 //   .then((response) => {
@@ -156,107 +156,110 @@ function Register() {
 
   return (
     <>
-      <section className="h-full relative pt-9 ">
-        <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40 ">
-          <div className="shadow-xl bg-indigo-50 rounded-2xl mb-10 md:mb-10 lg:mb-10 lg:xl-10 p-4 m-auto md:w-8/12 lg:w-6/12 xl:w-6/12 ">
-            <div className="font-normal text-center text-3xl text-black my-3 ">
-              Registration
-            </div>
-            <div className="p-2 py-2">
-              <div>
-                <label className="text-lg text-black">Full name</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  name="username"
-                  value={username || ""}
-                  onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+      <div className="h-full relative pt-9">
+        {/* <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40 "> */}
+        <div
+          className="shadow-xl bg-indigo-50 rounded-2xl mb-10 lg:xl-10 p-4 m-auto px-4 sm:px-6 
+            py-8 max-w-lg relative text-gray-500"
+        >
+          <div className="font-normal self-center text-3xl text-black my-3">
+            Create Your Account
+          </div>
+          <div className="p-2 mt-10">
+            <div className="mb-2 md:mb-4">
+              <label className="text-lg text-black">Full name</label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="username"
+                value={username || ""}
+                onChange={(e) => handleChange(e)}
+                className="mt-1 block w-full h-full text-sm sm:text-base px-4 py-3 rounded-lg border shadow-sm placeholder-slate-400
                   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-                />
-              </div>
+              />
+            </div>
 
-              <div className="mt-5">
-                <label className="text-lg text-black">Phone number</label>
-                <input
-                  type="number"
-                  placeholder="Contact Number"
-                  name="contact"
-                  value={contact || ""}
-                  onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            <div className="mb-2 md:mb-4">
+              <label className="text-lg text-black">Phone number</label>
+              <input
+                type="number"
+                placeholder="Contact Number"
+                name="contact"
+                value={contact || ""}
+                onChange={(e) => handleChange(e)}
+                className="mt-1 block w-full h-full text-sm sm:text-base px-4 py-3 rounded-lg border shadow-sm placeholder-slate-400
                   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                   disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                   invalid:border-pink-500 invalid:text-pink-600 peer
                   focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-                <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                  Enter only digit.
-                </p>
-              </div>
-
-              <div className="">
-                <label className="text-lg text-black">Email address</label>
-                <input
-                  type="email"
-                  placeholder="name@gmail.com"
-                  name="email"
-                  value={email || ""}
-                  onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600 peer
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-                <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                  Enter a valid email address.
-                </p>
-              </div>
-
-              <div className="">
-                <label className="text-lg text-black">Password</label>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  value={password || ""}
-                  onChange={(e) => handleChange(e)}
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600 peer
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-                <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                  Enter a strong password.
-                </p>
-              </div>
-
-              <button
-                type="button"
-                className="flex items-center justify-center h-11 bg-yellow-400 hover:bg-yellow-600 font-bold py-2 px-4 rounded-full
-                w-full shadow-2xl cursor-pointer 
-                overflow-hidden"
-                onClick={() => submit()}
-              >
-                <span className="block w-max text-white font-normal tracking-wide text-sm md:text-xl sm:text-base ">
-                  Register
-                </span>
-              </button>
-
-              <p className="mt-6 text-center">
-                Already have an account?{" "}
-                <NavLink to="/Login">
-                  <u className="text-blue-500 hover:text-blue-700 font-semibold">
-                    Login here
-                  </u>
-                </NavLink>
+              />
+              <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                Enter only digit.
               </p>
             </div>
+
+            <div className="mb-2 md:mb-4">
+              <label className="text-lg text-black">Email address</label>
+              <input
+                type="email"
+                placeholder="name@gmail.com"
+                name="email"
+                value={email || ""}
+                onChange={(e) => handleChange(e)}
+                className="mt-1 block w-full h-full text-sm sm:text-base px-4 py-3 rounded-lg border shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600 peer
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              />
+              <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                Enter a valid email address.
+              </p>
+            </div>
+
+            <div className="mb-2 md:mb-4">
+              <label className="text-lg text-black">Password</label>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={password || ""}
+                onChange={(e) => handleChange(e)}
+                className="mt-1 block w-full h-full text-sm sm:text-base px-4 py-3 rounded-lg border shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600 peer
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              />
+              <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                Enter a strong password.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              className="flex items-center justify-center h-11 font-normal tracking-wide text-2xl md:text-2xl sm:text-xl 
+              text-gray-600 bg-yellow-400 hover:bg-yellow-500 hover:text-white py-2 px-4 rounded-full w-full shadow-2xl cursor-pointer 
+                overflow-hidden"
+              onClick={() => submit()}
+            >
+              {/* <span className="block w-max text-white font-normal tracking-wide text-sm md:text-xl sm:text-base "> */}
+              Register
+              {/* </span> */}
+            </button>
+
+            <p className="mt-6 text-center text-slate-800">
+              Already have an account?{" "}
+              <NavLink to="/Login">
+                <u className="text-blue-500 hover:text-blue-700 font-semibold">
+                  Login here
+                </u>
+              </NavLink>
+            </p>
           </div>
         </div>
-      </section>
+        {/* </div> */}
+      </div>
     </>
   );
 }
