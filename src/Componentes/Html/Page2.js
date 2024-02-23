@@ -1,4 +1,6 @@
 import React from "react";
+import Pagination from "./Pagination";
+
 // import { UserAuth } from "../Context/AuthContext";
 
 const Page2 = () => {
@@ -6,11 +8,13 @@ const Page2 = () => {
 
   return (
     <>
-      <div className="container  overflow-none">
+      <Pagination />
+      <div className="overflow-none">
         <p className="font-normal text-4xl text-center my-3 text-blue-500">
-          Description of HTML Example 
-        </p><br/>
-        <hr class="py-2 border-t-2 border-green-600"/>
+          Description of HTML Example
+        </p>
+        <br />
+        <hr class="py-2 border-t-2 border-green-600" />
         <div className=" my-2 ">
           <p className="text-3xl text-center my-5 leading-tight">
             Example of HTML
@@ -24,8 +28,12 @@ const Page2 = () => {
         <div className="w-[64rem] h-auto mx-auto p-2 mt-3 bg-white rounded-3xl">
           <p className="text-center text-3xl font-normal leading-tight text-blue-500">
             Description
-          </p><br/>
-          <ul role="list" className="marker:text-sky-400  list-disc pl-5 space-y-3 text-slate-700">
+          </p>
+          <br />
+          <ul
+            role="list"
+            className="marker:text-sky-400  list-disc pl-5 space-y-3 text-slate-700"
+          >
             <li className="text-2xl my-1 leading-tight text-justify">
               &lt;!DOCTYPE html&gt; is defines the document type or it instruct
               the browser about the version of HTML.
@@ -49,7 +57,7 @@ const Page2 = () => {
                 className="flex w-[62rem] mx-auto bg-red-100 rounded-lg p-4 my-4 text-sm text-red-700"
                 role="alert"
               >
-                <div> 
+                <div>
                   <span className="text-2xl">! Note : </span>
                   <span className="text-xl ">
                     {" "}
@@ -83,8 +91,7 @@ const Page2 = () => {
               the webpage.
             </li>
             <li className=" text-2xl my-1 leading-tight text-justify">
-              Text between &lt;p&gt; tag describes the paragraph of the
-              webpage.
+              Text between &lt;p&gt; tag describes the paragraph of the webpage.
             </li>
           </ul>
           <div

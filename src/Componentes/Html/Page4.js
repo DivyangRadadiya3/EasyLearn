@@ -1,9 +1,11 @@
 import React from "react";
+import Pagination from "./Pagination";
 
 const Page4 = () => {
   return (
     <>
       {/* <hr className="py-2 border-t-1 border-black" /> */}
+      <Pagination />
       <p class="font-normal text-center my-4 text-3xl">HTML Text Editors</p>
       <div
         className="flex w-[62rem] mx-auto bg-green-300 rounded-lg p-4 my-4 text-sm"
@@ -19,9 +21,7 @@ const Page4 = () => {
         </div>
       </div>
       <hr className="py-2 border-t-1 border-gray-500" />
-      <div className="container  overflow-none">
-
-      </div>
+      <div className="container  overflow-none"></div>
     </>
   );
 };

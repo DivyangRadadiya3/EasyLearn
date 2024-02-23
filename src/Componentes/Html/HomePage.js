@@ -17,59 +17,66 @@ function Home() {
                 class="inline-flex rounded-md shadow-sm text-nowrap"
                 role="group"
               >
-                <button
-                  type="button"
-                  class="px-4 py-2  text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
-                >
-                  <span
-                    data-te-stepper-head-icon-ref
-                    className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                <NavLink to={"/Html/Page1"}>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                   >
-                    1
-                  </span>
-                  Introduction of HTML
-                </button>
-                <button
-                  type="button"
-                  class="px-4 py-2 text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
-                >
-                  <span
-                    data-te-stepper-head-icon-ref
-                    className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    <span
+                      data-te-stepper-head-icon-ref
+                      className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    >
+                      1
+                    </span>
+                    Introduction of HTML
+                  </button>
+                </NavLink>
+                <NavLink to={"/Html/Page2"}>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                   >
-                    2
-                  </span>
-                  Description of HTML Example
-                </button>
-                <button
-                  type="button"
-                  class="px-4 py-2  text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
-                >
-                  <span
-                    data-te-stepper-head-icon-ref
-                    className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    <span
+                      data-te-stepper-head-icon-ref
+                      className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    >
+                      2
+                    </span>
+                    Description of HTML Example
+                  </button>
+                </NavLink>
+                <NavLink to={"/Html/Page3"}>
+                  <button
+                    type="button"
+                    className="px-4 py-2  text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                   >
-                    3
-                  </span>
-                  Featuers of HTML
-                </button>
-                <button
-                  type="button"
-                  class="px-4 py-2  text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
-                >
-                  <span
-                    data-te-stepper-head-icon-ref
-                    className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    <span
+                      data-te-stepper-head-icon-ref
+                      className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    >
+                      3
+                    </span>
+                    Featuers of HTML
+                  </button>
+                </NavLink>
+                <NavLink to={"/Html/Page4"}>
+                  <button
+                    type="button"
+                    className="px-4 py-2  text-2xl font-normal text-gray-900 bg-transparent border-r border-gray-900  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                   >
-                    4
-                  </span>
-                  Text editors of HTML
-                </button>
+                    <span
+                      data-te-stepper-head-icon-ref
+                      className="my-4 mr-2 w-10 h-10 items-center justify-center text-3xl font-medium text-yellow-400"
+                    >
+                      4
+                    </span>
+                    Text editors of HTML
+                  </button>
+                </NavLink>
                 <button
                   type="button"
-                  class="px-4 py-2  text-2xl font-normal text-yellow-400 bg-transparent  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-yellow-400 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+                  className="px-4 py-2 rounded-r-lg text-2xl font-normal text-yellow-400 bg-transparent  hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-yellow-400 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                 >
-                 
                   Solve Task
                 </button>
               </div>

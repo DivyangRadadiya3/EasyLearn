@@ -1,4 +1,5 @@
 import React from "react";
+import Pagination from "./Pagination";
 // import { UserAuth } from "../Context/AuthContext";
 import { NavLink } from "react-router-dom";
 
@@ -8,7 +9,8 @@ const Page1 = () => {
   return (
     <>
       {/* <div className="container relative flex flex-wrap items-center overflow-hidden"> */}
-      <div className="w-[64rem] h-auto mx-auto p-2 mt-3 bg-white rounded-3xl">
+      <Pagination />
+      <div className="w-auto h-full mx-auto p-2 mt-3 bg-white rounded-3xl">
         <p className="text-center text-4xl mb-12 leading-tight">
           Introduction of HTML
         </p>
