@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="flex w-full h-full ">
+      <div className="flex w-full h-full">
         <div className="w-2/12 absolute sm:relative bg-white text-black justify-between flex-auto sm:flex min-height: 716px">
           <DashboardNavBar
             setActivePage={setActivePage}

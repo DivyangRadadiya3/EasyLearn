@@ -147,7 +147,7 @@ const Profilecard = () => {
   return (
     <>
         <div className="flex">
-          <div className="relative bg-white shadow rounded-3xl w-4/12 mx-3 p-3 px-6">
+          <div className="relative bg-white shadow-xl rounded-3xl w-4/12 mx-3 p-3 px-6">
             <div className="relative">
               <img
                 className="h-40 w-40 rounded-full border mx-auto"
@@ -297,7 +297,7 @@ const Profilecard = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-9/12 sm:9/12 p-2 w-8/12 mr-3 pl-5 h-fit bg-white rounded-3xl">
+          <div className="md:w-9/12 sm:9/12 p-2 w-8/12 mr-3 pl-5 h-fit shadow-xl bg-white rounded-3xl">
             <div className="p-3">
               <div className="text-gray-700">
                 <div className="grid md:grid-cols-2 gap-3 text-sm">

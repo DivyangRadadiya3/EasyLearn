@@ -73,7 +73,7 @@ const DashboardNavBar = ({ setActivePage, activePage }) => {
           )}
         </button>
       </div>
-      <div className="relative px-2  md:fixed w-full md:w-2/12 mt-[85px]  inset-0 border-r-2">
+      <div className=" relative px-2 md:fixed w-full md:w-2/12 mt-[85px]  inset-0 border-r-2">
         <ul className="py-4 text-lg" aria-labelledby="dropdown">
           <li
             onClick={() => {
